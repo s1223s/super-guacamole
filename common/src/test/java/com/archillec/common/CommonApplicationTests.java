@@ -1,12 +1,10 @@
-package com.archillec.bigdata;
-
+package com.archillec.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class BigdataApplicationTests {
+class CommonApplicationTests {
 
     @Test
     void contextLoads() {
