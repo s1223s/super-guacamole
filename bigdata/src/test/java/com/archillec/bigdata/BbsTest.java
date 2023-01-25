@@ -17,6 +17,7 @@ public class BbsTest {
     public void testsql(){
         System.out.print("---------start test--------");
         List<BbsEntity> List = bbsMapper.selectList(null);
-        List.forEach(System.out::println);
+        System.out.println(List);;
+//        List.forEach(System.out::println);
     }
 }

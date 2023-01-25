@@ -2,8 +2,11 @@ package com.archillec.bigdata.entity;
 
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -14,5 +17,6 @@ public class BbsEntity {
     private Boolean type;
     private String content;
     private String publisher;
-    private Date add_time;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime add_time;
 }
