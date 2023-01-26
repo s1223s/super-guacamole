@@ -1,7 +1,10 @@
 package com.archillec.mmg.controller;
 
+import com.archillec.common.api.CommonPage;
+import com.archillec.common.api.CommonResult;
 import com.archillec.mmg.entity.Account;
 import com.archillec.mmg.mapper.AccountMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
@@ -26,9 +29,13 @@ public class AccountController {
 
     @RequestMapping("getlist")
     @ResponseBody
-    public List<Account> getaccountlist(){
-        List<Account> list = this.accountMapper.selectList(null);
+    public Page<Account> getaccountlist(){
+//        List<Account> list = this.accountMapper.selectList(null);
+        Page<Account> page = new Page<>(1,3);
+        accountMapper.selectPage(page,null);
+//        System.out.println(page);
+//        this.accountMapper.selectPage(page,null);
 
-        return list;
+        return page;
     }
 }
