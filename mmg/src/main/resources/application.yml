@@ -3,10 +3,10 @@ spring:
     #数据库驱动完整类名
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: qinjiajun1103
+    password: 123456
     url: jdbc:mysql://127.0.0.1:3306/jx_MmgDev
-#mybatis-plus:
-#  configuration:
-#    map-underscore-to-camel-case: false
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 server:
   port: 8083

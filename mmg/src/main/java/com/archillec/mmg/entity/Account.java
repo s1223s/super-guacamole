@@ -48,6 +48,7 @@ public class Account implements Serializable {
 
     private Integer lasttime;
 
+
     public Integer getId() {
         return id;
     }
